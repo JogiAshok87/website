@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
-import {Navigate} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 
 import './index.css'
 
@@ -96,13 +96,13 @@ class LoginForm extends Component {
     const jwtToken = Cookies.get('jwt_token')
 
     if (jwtToken !== undefined) {
-      return <Navigate to="/" />
+      return <Redirect to="/" />
     }
 
     return (
       <div className="login-form-container">
         <img
-          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+          src="https://i.im.ge/2024/03/09/8Gn2zm.image.png"
           className="login-website-logo-mobile-img"
           alt="website logo"
         />
@@ -113,7 +113,7 @@ class LoginForm extends Component {
         />
         <form className="form-container" onSubmit={this.submitForm}>
           <img
-            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+            src="https://i.im.ge/2024/03/09/8Gn2zm.image.png"
             className="login-website-logo-desktop-img"
             alt="website logo"
           />
@@ -123,6 +123,8 @@ class LoginForm extends Component {
             Login
           </button>
           {showSubmitError && <p className="error-message">*{errorMsg}</p>}
+          
+          
         </form>
       </div>
     )

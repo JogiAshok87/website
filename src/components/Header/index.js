@@ -1,4 +1,4 @@
-import {Link, } from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import CartContext from '../../context/CartContext'
@@ -36,7 +36,7 @@ const Header = props => {
           <Link to="/">
             <img
               className="website-logo"
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+              src="https://i.im.ge/2024/03/09/8Gn2zm.image.png"
               alt="website logo"
             />
           </Link>
@@ -58,7 +58,7 @@ const Header = props => {
           <Link to="/">
             <img
               className="website-logo"
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+              src="https://i.im.ge/2024/03/09/8Gn2zm.image.png"
               alt="website logo"
             />
           </Link>
@@ -128,4 +128,4 @@ const Header = props => {
   )
 }
 
-export default Header
+export default withRouter(Header)
